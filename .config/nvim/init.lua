@@ -162,8 +162,7 @@ end
 
 
 require("mason").setup()
-require("mason-lspconfig").setup {}
-require("mason-lspconfig").setup_handlers {
+require("mason-lspconfig").setup {
 	function(server_name)
 		require("lspconfig")[server_name].setup {
 			capabilities = capabilities,
