@@ -1,2 +1,3 @@
 # nvim package manager
 **/lazy-lock.json
+.config/Windows/yasb/yasb.log
