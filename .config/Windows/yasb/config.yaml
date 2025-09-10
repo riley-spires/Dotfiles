@@ -40,7 +40,8 @@ bars:
     widgets:
       left: [
         "home",
-        "glazewm_workspaces",
+        # "glazewm_workspaces",
+        "windows_workspaces"
       ]
       center: [
         "clock",
@@ -56,6 +57,16 @@ bars:
         "power_menu"
         ]
 widgets:
+  windows_workspaces:
+    type: "yasb.windows_desktops.WorkspaceWidget"
+    options:
+      label_workspace_btn: "{index}"
+      label_workspace_active_btn: "{index}"
+      btn_shadow:
+        enabled: true
+        color: "black"
+        radius: 3
+        offset: [ 1, 1 ]
   systray:
     type: "yasb.systray.SystrayWidget"
     options:
