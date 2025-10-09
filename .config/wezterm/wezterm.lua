@@ -1,6 +1,13 @@
 local wezterm = require 'wezterm'
 local act = wezterm.action
 
+wezterm.on('spawn-pane', function(window, pane)
+    window:perform_action(
+        act.SpawnTab('CurrentPaneDomain'),
+        pane
+    )
+end)
+
 local config = wezterm.config_builder()
 
 -- Set shell to powershell 7
@@ -24,7 +31,7 @@ config.keys = {
     {
         key = 't',
         mods = 'CTRL',
-        action = act.SpawnTab('CurrentPaneDomain')
+        action = act.EmitEvent('spawn-pane')
     },
     {
         key = 'w',
