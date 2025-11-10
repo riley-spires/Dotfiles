@@ -182,3 +182,18 @@ vim.api.nvim_create_autocmd("BufEnter", {
         })
     end
 })
+
+-- Manual setup of rust-analyzer for arm64
+vim.lsp.config('rust-analyzer', {
+	capabilities = capabilities,
+})
+vim.api.nvim_create_autocmd("BufEnter", {
+    pattern = {"*.rs"},
+    callback = function(ev)
+        vim.lsp.start({
+            name = "rust-analyzer",
+            cmd = {"rust-analyzer"},
+            root_dir = vim.fs.root(0, {"Cargo.toml"})
+        })
+    end
+})
