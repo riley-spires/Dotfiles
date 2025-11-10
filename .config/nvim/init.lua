@@ -142,8 +142,6 @@ cmp.setup.cmdline(":", {
 	matching = { disallow_symbol_nonprefix_matching = false }
 })
 
-local capabilities = require('cmp_nvim_lsp').default_capabilities()
-
 -- LSP Keybinds
 local opts = { noremap = true, silent = true }
 vim.keymap.set("n", "gD", vim.lsp.buf.declaration, opts)
@@ -170,13 +168,7 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 })
 
 -- Manual setup of clangd for arm64, other platforms use Mason
-vim.lsp.config("clangd", {
-	capabilities = capabilities,
-})
 vim.lsp.enable("clangd")
 
 -- Manual setup of rust-analyzer for arm64, other platforms use Mason
-vim.lsp.config("rust_analyzer", {
-	capabilities = capabilities,
-})
 vim.lsp.enable("rust_analyzer")
