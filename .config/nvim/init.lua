@@ -168,7 +168,7 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 	end,
 })
 
--- Manual setup of clangd for arm64
+-- Manual setup of clangd for arm64, other platforms use Mason
 vim.lsp.config('clangd', {
 	capabilities = capabilities,
 })
@@ -183,7 +183,7 @@ vim.api.nvim_create_autocmd("BufEnter", {
     end
 })
 
--- Manual setup of rust-analyzer for arm64
+-- Manual setup of rust-analyzer for arm64, other platforms use Mason
 vim.lsp.config('rust-analyzer', {
 	capabilities = capabilities,
 })
