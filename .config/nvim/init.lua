@@ -157,6 +157,7 @@ vim.keymap.set("n", "]d", vim.diagnostic.goto_next)
 
 
 require("mason").setup()
+-- require("mason-lspconfig").setup()
 require("autoclose").setup()
 require("neogit").setup()
 
@@ -169,31 +170,13 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 })
 
 -- Manual setup of clangd for arm64, other platforms use Mason
-vim.lsp.config('clangd', {
+vim.lsp.config("clangd", {
 	capabilities = capabilities,
 })
-vim.api.nvim_create_autocmd("BufEnter", {
-    pattern = {"*.c", "*.cpp", "*.h", "*.hpp"},
-    callback = function(ev)
-        vim.lsp.start({
-            name = "clangd",
-            cmd = {"clangd"},
-            root_dir = vim.fs.root(0, {"CMakeList.txt", "build"})
-        })
-    end
-})
+vim.lsp.enable("clangd")
 
 -- Manual setup of rust-analyzer for arm64, other platforms use Mason
-vim.lsp.config('rust-analyzer', {
+vim.lsp.config("rust_analyzer", {
 	capabilities = capabilities,
 })
-vim.api.nvim_create_autocmd("BufEnter", {
-    pattern = {"*.rs"},
-    callback = function(ev)
-        vim.lsp.start({
-            name = "rust-analyzer",
-            cmd = {"rust-analyzer"},
-            root_dir = vim.fs.root(0, {"Cargo.toml"})
-        })
-    end
-})
+vim.lsp.enable("rust_analyzer")
