@@ -1,3 +1,3 @@
-return {
-    {"nvim-treesitter/nvim-treesitter", run = ':TSUpdate'}
-}
+vim.pack.add({
+    { src = "https://github.com/nvim-treesitter/nvim-treesitter", run = ':TSUpdate'}
+})

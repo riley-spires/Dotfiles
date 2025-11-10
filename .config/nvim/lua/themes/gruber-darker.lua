@@ -1,3 +1,3 @@
-return {
-    "blazkowolf/gruber-darker.nvim" 
-}
+vim.pack.add({
+    "https://github.com/blazkowolf/gruber-darker.nvim"
+})

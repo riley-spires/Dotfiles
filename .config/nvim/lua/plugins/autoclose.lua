@@ -1,3 +1,3 @@
-return {
-    "m4xshen/autoclose.nvim",
-}
+vim.pack.add({
+    "https://github.com/m4xshen/autoclose.nvim"
+})

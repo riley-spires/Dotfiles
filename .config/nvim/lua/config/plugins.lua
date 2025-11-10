@@ -1,0 +1,7 @@
+require("plugins.autoclose")
+require("plugins.harpoon")
+require("plugins.lsp")
+require("plugins.mason")
+require("plugins.neogen")
+require("plugins.neogit")
+require("plugins.treesitter")
