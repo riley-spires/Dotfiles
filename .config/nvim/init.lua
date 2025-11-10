@@ -144,34 +144,19 @@ cmp.setup.cmdline(":", {
 
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 
--- local function on_attach(_, bufnr)
-local function on_attach(e)
-    local bufnr = e.buf
-	local opts = { noremap = true, silent = true }
-	vim.api.nvim_buf_set_keymap(bufnr, "n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", opts)
-	vim.api.nvim_buf_set_keymap(bufnr, "n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", opts)
-	vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>rn", "<cmd>lua vim.lsp.buf.rename()<CR>", opts)
-	vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>ca", "<cmd>lua vim.lsp.buf.code_action()<CR>", opts)
-	vim.api.nvim_buf_set_keymap(bufnr, "n", "<leader>rf", "<cmd>lua vim.lsp.buf.format()<CR>", opts)
+-- LSP Keybinds
+local opts = { noremap = true, silent = true }
+vim.keymap.set("n", "gD", vim.lsp.buf.declaration, opts)
+vim.keymap.set("n", "gd", vim.lsp.buf.definition, opts)
+vim.keymap.set("n", "<leader>rn", vim.lsp.buf.rename, opts)
+vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, opts)
+vim.keymap.set("n", "<leader>rf", vim.lsp.buf.format, opts)
 
-	vim.keymap.set("n", "[d", vim.diagnostic.goto_prev)
-	vim.keymap.set("n", "]d", vim.diagnostic.goto_next)
-end
+vim.keymap.set("n", "[d", vim.diagnostic.goto_prev)
+vim.keymap.set("n", "]d", vim.diagnostic.goto_next)
 
 
 require("mason").setup()
--- Unsure if the following does anything. TODO: Investigate
--- require("mason-lspconfig").setup {
--- 	function(server_name)
--- 		require("lspconfig")[server_name].setup {
--- 			capabilities = capabilities,
--- 		}
--- 	end,
--- }
-vim.api.nvim_create_autocmd('LspAttach', {
-    callback = on_attach
-})
-
 require("autoclose").setup()
 require("neogit").setup()
 
@@ -186,5 +171,14 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 -- Manual setup of clangd for arm64
 vim.lsp.config('clangd', {
 	capabilities = capabilities,
-	on_attach = on_attach
+})
+vim.api.nvim_create_autocmd("BufEnter", {
+    pattern = {"*.c", "*.cpp", "*.h", "*.hpp"},
+    callback = function(ev)
+        vim.lsp.start({
+            name = "clangd",
+            cmd = {"clangd"},
+            root_dir = vim.fs.root(0, {"CMakeList.txt", "build"})
+        })
+    end
 })
