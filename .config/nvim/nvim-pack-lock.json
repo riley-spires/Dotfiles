@@ -56,6 +56,10 @@
       "rev": "106c4bc",
       "src": "https://github.com/hrsh7th/nvim-cmp"
     },
+    "nvim-lspconfig": {
+      "rev": "2010fc6",
+      "src": "https://github.com/neovim/nvim-lspconfig"
+    },
     "nvim-treesitter": {
       "rev": "42fc28ba",
       "src": "https://github.com/nvim-treesitter/nvim-treesitter"

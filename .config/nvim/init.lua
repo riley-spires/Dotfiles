@@ -182,3 +182,9 @@ vim.api.nvim_create_autocmd("TextYankPost", {
 		vim.highlight.on_yank()
 	end,
 })
+
+-- Manual setup of clangd for arm64
+vim.lsp.config('clangd', {
+	capabilities = capabilities,
+	on_attach = on_attach
+})
