@@ -157,7 +157,7 @@ vim.keymap.set("n", "]d", vim.diagnostic.goto_next)
 
 
 require("mason").setup()
--- require("mason-lspconfig").setup()
+require("mason-lspconfig").setup()
 require("autoclose").setup()
 require("neogit").setup()
 
