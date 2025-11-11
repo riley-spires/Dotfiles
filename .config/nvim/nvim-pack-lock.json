@@ -71,6 +71,10 @@
     "telescope.nvim": {
       "rev": "0294ae3",
       "src": "https://github.com/nvim-telescope/telescope.nvim"
+    },
+    "vim-vsnip": {
+      "rev": "9bcfabe",
+      "src": "https://github.com/hrsh7th/vim-vsnip"
     }
   }
 }
