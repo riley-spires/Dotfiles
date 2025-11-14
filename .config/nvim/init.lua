@@ -47,7 +47,7 @@ require('material').setup {
 }
 
 vim.keymap.set('n', "<M-n>", "<cmd>nohlsearch<CR>")
-vim.keymap.set('n', "<leader>ng", "<cmd>Neogit<CR>")
+vim.keymap.set('n', "<leader>ng", "<cmd>LazyGit<CR>")
 vim.keymap.set('n', "<leader>x", "<cmd>Ex<CR>")
 
 require("telescope").setup()
@@ -157,7 +157,7 @@ vim.keymap.set("n", "]d", vim.diagnostic.goto_next)
 require("mason").setup()
 require("mason-lspconfig").setup()
 require("autoclose").setup()
-require("neogit").setup()
+-- require("neogit").setup()
 
 vim.api.nvim_create_autocmd("TextYankPost", {
 	desc = "Highlight when yanking text",
