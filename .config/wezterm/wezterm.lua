@@ -10,11 +10,8 @@ end)
 
 local config = wezterm.config_builder()
 
--- Set shell to powershell 7
-config.default_prog = { "C:/Program Files/PowerShell/7/pwsh.exe" }
-
 -- Set font
-config.font = wezterm.font("Monocraft Nerd Font")
+config.font = wezterm.font("JetBrains Mono")
 config.font_size = 14
 
 -- Hide tabs
