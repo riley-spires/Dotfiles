@@ -1,83 +1,75 @@
 {
   "plugins": {
     "autoclose.nvim": {
-      "rev": "3f86702",
+      "rev": "3f86702b54a861a17d7994b2e32a7c648cb12fb1",
       "src": "https://github.com/m4xshen/autoclose.nvim"
     },
     "cmp-buffer": {
-      "rev": "b74fab3",
+      "rev": "b74fab3656eea9de20a9b8116afa3cfc4ec09657",
       "src": "https://github.com/hrsh7th/cmp-buffer"
     },
     "cmp-cmdline": {
-      "rev": "d126061",
+      "rev": "d126061b624e0af6c3a556428712dd4d4194ec6d",
       "src": "https://github.com/hrsh7th/cmp-cmdline"
     },
     "cmp-nvim-lsp": {
-      "rev": "bd5a7d6",
+      "rev": "bd5a7d6db125d4654b50eeae9f5217f24bb22fd3",
       "src": "https://github.com/hrsh7th/cmp-nvim-lsp"
     },
     "cmp-path": {
-      "rev": "c642487",
+      "rev": "c642487086dbd9a93160e1679a1327be111cbc25",
       "src": "https://github.com/hrsh7th/cmp-path"
     },
-    "diffview.nvim": {
-      "rev": "4516612",
-      "src": "https://github.com/sindrets/diffview.nvim"
-    },
     "gruber-darker.nvim": {
-      "rev": "98a2e14",
+      "rev": "98a2e141981cbd5a194a97eae024bf55af854579",
       "src": "https://github.com/blazkowolf/gruber-darker.nvim"
     },
     "harpoon": {
-      "rev": "1bc17e3",
+      "rev": "1bc17e3e42ea3c46b33c0bbad6a880792692a1b3",
       "src": "https://github.com/ThePrimeagen/harpoon"
     },
     "lazygit.nvim": {
-      "rev": "2305dee",
+      "rev": "2305deed25bc61b866d5d39189e9105a45cf1cfb",
       "src": "https://github.com/kdheepak/lazygit.nvim"
     },
     "mason-lspconfig.nvim": {
-      "rev": "b1d9a91",
+      "rev": "b1d9a914b02ba5660f1e272a03314b31d4576fe2",
       "src": "https://github.com/williamboman/mason-lspconfig.nvim"
     },
     "mason.nvim": {
-      "rev": "ad7146a",
+      "rev": "ad7146aa61dcaeb54fa900144d768f040090bff0",
       "src": "https://github.com/williamboman/mason.nvim"
     },
     "material.nvim": {
-      "rev": "8a34cb0",
+      "rev": "8a34cb0d05e12a05b64edaf6ca1c3c7bde545628",
       "src": "https://github.com/marko-cerovac/material.nvim"
     },
     "neogen": {
-      "rev": "d7f9461",
+      "rev": "d7f9461727751fb07f82011051338a9aba07581d",
       "src": "https://github.com/danymat/neogen"
     },
-    "neogit": {
-      "rev": "2cc5daff",
-      "src": "https://github.com/NeogitOrg/neogit"
-    },
     "nvim-cmp": {
-      "rev": "106c4bc",
+      "rev": "106c4bcc053a5da783bf4a9d907b6f22485c2ea0",
       "src": "https://github.com/hrsh7th/nvim-cmp"
     },
     "nvim-lspconfig": {
-      "rev": "2010fc6",
+      "rev": "2010fc6ec03e2da552b4886fceb2f7bc0fc2e9c0",
       "src": "https://github.com/neovim/nvim-lspconfig"
     },
     "nvim-treesitter": {
-      "rev": "42fc28ba",
+      "rev": "42fc28ba918343ebfd5565147a42a26580579482",
       "src": "https://github.com/nvim-treesitter/nvim-treesitter"
     },
     "plenary.nvim": {
-      "rev": "b9fd522",
+      "rev": "b9fd5226c2f76c951fc8ed5923d85e4de065e509",
       "src": "https://github.com/nvim-lua/plenary.nvim"
     },
     "telescope.nvim": {
-      "rev": "0294ae3",
+      "rev": "0294ae3eafe662c438addb8692d9c98ef73a983e",
       "src": "https://github.com/nvim-telescope/telescope.nvim"
     },
     "vim-vsnip": {
-      "rev": "9bcfabe",
+      "rev": "9bcfabea653abdcdac584283b5097c3f8760abaa",
       "src": "https://github.com/hrsh7th/vim-vsnip"
     }
   }
